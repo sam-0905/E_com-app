@@ -1,0 +1,13 @@
+{
+  "name": "e_com-app",
+  "version": "1.0.0",
+  "description": "\"This is an ecommerce app made by me\"",
+  "devDependencies": {},
+  "scripts": {
+    "start": "parcel index.html && parcel watch index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "author": "\"Allan sam\"",
+  "license": "ISC"
+}
