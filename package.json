@@ -2,12 +2,18 @@
   "name": "e_com-app",
   "version": "1.0.0",
   "description": "\"This is an ecommerce app made by me\"",
-  "devDependencies": {},
+  "devDependencies": {
+    "parcel": "^2.13.0"
+  },
   "scripts": {
     "start": "parcel index.html && parcel watch index.html",
     "build": "parcel build index.html",
     "test": "jest"
   },
   "author": "\"Allan sam\"",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
 }
