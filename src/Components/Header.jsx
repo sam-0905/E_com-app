@@ -23,16 +23,16 @@ const Header = () => {
          <Title/>
     <nav className="Nav link ">
         <NavLink style={getActiveLink} to="/">
-        <i className="fa fa-home container"> Home  </i>
+        <a className="fa fa-home container"> Home  </a>
         </NavLink>
         <NavLink style={getActiveLink} to="/login">
-          <i className="fa fa-sign-in container" >Login</i>
+          <a className="fa fa-sign-in container" >Login</a>
         </NavLink>
         <NavLink style={getActiveLink} to="/wish">
-        <i className="fa fa-heart container">Wishlist</i>
+        <a className="fa fa-heart container">Wishlist</a>
         </NavLink>
         <NavLink style={getActiveLink} to="/cart">
-        <i className="fa fa-cart-arrow-down container">Cart</i>
+        <a className="fa fa-cart-arrow-down container">Cart</a>
         </NavLink>
       </nav>
     </div>
