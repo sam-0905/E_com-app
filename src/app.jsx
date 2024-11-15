@@ -1,11 +1,9 @@
-import "font-awesome/css/font-awesome.min.css";
+// import "font-awesome/css/font-awesome.min.css";
 import { Routes, Route } from 'react-router-dom';
 import Body from "./Body";
 import Header from './Components/Header';
 
-
 const App = () => {
-
     return (
     <>
     <Header/>
