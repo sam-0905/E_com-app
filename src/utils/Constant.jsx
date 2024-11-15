@@ -1,6 +1,5 @@
 import { faker } from '@faker-js/faker';
 
-
 faker.seed(123);
 
 // eslint-disable-next-line no-unused-vars
