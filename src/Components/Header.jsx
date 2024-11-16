@@ -26,13 +26,13 @@ const Header = () => {
         <a className="fa fa-home container"> Home  </a>
         </NavLink>
         <NavLink style={getActiveLink} to="/login">
-          <a className="fa fa-sign-in container" >Login</a>
+          <a className="fa fa-sign-in container" > Login</a>
         </NavLink>
         <NavLink style={getActiveLink} to="/wish">
-        <a className="fa fa-heart container">Wishlist</a>
+        <a className="fa fa-heart container"> Wishlist</a>
         </NavLink>
         <NavLink style={getActiveLink} to="/cart">
-        <a className="fa fa-cart-arrow-down container">Cart</a>
+        <a className="fa fa-cart-arrow-down container"> Cart</a>
         </NavLink>
       </nav>
     </div>
