@@ -8,7 +8,10 @@
     margin: 0 auto;
     margin-top: 0;
     text-align: center;
-    width: 100%;     
+    width: 100%; 
+    --primary-color-:#00203F;
+    --secondary-color-:#ADEFD1;
+
 }
 body{
     margin: 0;
@@ -20,7 +23,8 @@ body{
     justify-content: center;
     justify-content: space-between;
     margin-left: auto;
-    background-color: blueviolet;
+    background-color:var(--primary-color-);
+    color: var(--secondary-color-);
     margin-top: 0;  
     border-bottom: 1px solid black;
     border-radius: 0rem 0rem 0.5rem 0.5rem;
@@ -144,8 +148,8 @@ a{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background:#8a2be2;
-  color:cornsilk;
+  background:var(--primary-color-);
+  color:var(--secondary-color-);
   border-radius: 1rem;
   overflow: hidden;
   padding: 20px;
@@ -167,6 +171,7 @@ a{
 .card-container{
   width: 100%;
   height: 30%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .card-img{
   display: flex;
@@ -204,7 +209,7 @@ flex-direction: column;
 
 .in-stock {
   background: #e8f5e9;
-  color:#83e22b;
+  color:#34a105;
 }
 
 .out-stock {
