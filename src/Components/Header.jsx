@@ -22,6 +22,7 @@ const Header = () => {
     <div className="header">
          <Title/>
     <nav className="Nav link ">
+      <h1>APPU</h1>
         <NavLink style={getActiveLink} to="/">
         <a className="fa fa-home container"> Home  </a>
         </NavLink>
