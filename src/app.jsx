@@ -2,6 +2,9 @@ import "font-awesome/css/font-awesome.min.css";
 import { Routes, Route } from 'react-router-dom';
 import Body from "./Body";
 import Header from './Components/Header';
+import Cart from "./pages/Cart";
+import Home from "./pages/Home";
+import CartItem from "./Cart/CartItem";
 
 
 const App = () => {
@@ -9,9 +12,12 @@ const App = () => {
     <>
     <Header/>
     <Routes>
-        <Route path="/" element={<Body/>} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/body" element={<Body/>} />
         {/* <Route path="/login" element={<LoginComp />} /> */}
-        {/* <Route path="/cart" element={<CartCompo />} /> */}
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/cartItem" element={<CartItem />} />
+
         {/* <Route path="/wish" element={<WishListCompo />} /> */}
         <Route path="*" element={<Error />} /> 
 
