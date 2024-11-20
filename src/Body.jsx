@@ -1,5 +1,7 @@
 import { useState } from "react";
 import data from './utils/Constant';
+import { Link } from "react-router-dom";
+import { useCart } from "./Context/Cart-Context";
 
 const Body = () => {
     const[searchText , setSearchText] = useState();
@@ -14,6 +16,8 @@ const Body = () => {
     }
 
     const changeSearchHandler = (e) => setSearchText(e.target.value)
+    const { state, dispatch } = useCart();
+
 
     return (
         <>  
@@ -57,6 +61,9 @@ const Body = () => {
                      <div> 3 days minimum </div>
                      )}
                     </div>
+                    <div>
+                      <Link to="/cart"><button onClick={()=> dispatch({type:"ADD_TO_CART", payload:price})  }>ADD TO CART</button></Link>
+                      </div>
                    
                 </div>
                    
