@@ -28,7 +28,8 @@ const App = () => {
         {/* <Route path="/product/:ProductId" element={<ProductComponent />} />
         <Route path="/cateogry" element={<Category />} />*/}
       </Routes>
-    </>)
+    </>
+    )
 
 }
 

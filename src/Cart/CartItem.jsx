@@ -5,10 +5,10 @@ import CartItem from './CartItem';
 const CartItem = () => {
     const { state, dispatch } = useCart();
     const { quantity, totalPrice } = state;
-
    return (
     <>
     <h1>cartItem</h1>
+
     {data.map(({name,price,id,image}) => (
         <div key={id}>
             <img src={image}></img>
