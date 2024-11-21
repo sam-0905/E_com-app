@@ -1,4 +1,4 @@
-export function cartFunc(state, action) {
+export function cartReducer(state, action) {
     switch (action.type) {
       case 'ADD_TO_CART':
         return {
