@@ -1,5 +1,6 @@
 import data from "../utils/Constant";
 import { useCart } from "../Context/Cart-Context";
+import CartItem from './CartItem';
 
 const CartItem = () => {
     const { state, dispatch } = useCart();
@@ -14,8 +15,8 @@ const CartItem = () => {
             <h2>{name}</h2>
             <h2>{price}</h2>
 
-            <button onClick={()=> dispatch({type:"ADD_TO_CART", payload:price})}>+</button>
-            <button onClick={() =>dispatch({ type:'REMOVE_FROM_CART',payload: price})}>-</button>
+            <button onClick={()=> dispatch({type:"ADD_TO_CART", payload:{id,price}})}>+</button>
+            <button onClick={() =>dispatch({ type:'REMOVE_FROM_CART',payload: {id,price}})}>-</button>
 
             <div><h2>Oder summary</h2>
             <h2>quantity: {quantity} </h2>
