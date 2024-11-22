@@ -61,8 +61,24 @@ const Body = () => {
                      <div> 3 days minimum </div>
                      )}
                     </div>
-                    <div>
-                      <Link to="/cart"><button onClick={()=> dispatch({type:"ADD_TO_CART", payload:price})  }>ADD TO CART</button></Link>
+                 <div>{state.quantity > 0 && (
+               <span
+                        style={{
+                      position: "absolute",
+                      top: "10px",
+                      right: "40px",
+                     background: "red",
+                     color: "white",
+                     borderRadius: "50%",
+                     padding: "5px 10px",
+                     fontSize: "10px",
+                     }}
+                       >
+                    {state.quantity}
+                   </span>
+                   )}
+                    
+                    <button className="button-54" onClick={()=> dispatch({type:"ADD_TO_CART", payload:{price,id,name}})}>ADD TO CART</button>
                       </div>
                    
                 </div>
