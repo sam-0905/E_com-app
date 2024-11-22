@@ -2,6 +2,7 @@ import { useState } from "react";
 import data from './utils/Constant';
 import { Link } from "react-router-dom";
 import { useCart } from "./Context/Cart-Context";
+import "./Cart/cart.css"
 
 const Body = () => {
     const[searchText , setSearchText] = useState();
@@ -62,23 +63,10 @@ const Body = () => {
                      )}
                     </div>
                  <div>{state.quantity > 0 && (
-               <span
-                        style={{
-                      position: "absolute",
-                      top: "10px",
-                      right: "40px",
-                     background: "red",
-                     color: "white",
-                     borderRadius: "50%",
-                     padding: "5px 10px",
-                     fontSize: "10px",
-                     }}
-                       >
-                    {state.quantity}
-                   </span>
+               <span className="cart-counter"> {state.quantity}</span>
                    )}
                     
-                    <button className="button-54" onClick={()=> dispatch({type:"ADD_TO_CART", payload:{price,id,name}})}>ADD TO CART</button>
+                    <button className="button-54" onClick={()=> dispatch({type:"ADD_TO_CART", payload:{price,id,name,image}})}>ADD TO CART</button>
                       </div>
                    
                 </div>

@@ -3,19 +3,23 @@
 import { NavLink } from 'react-router-dom';
 // import AppIcon from "../assets/images/AppIcon.svg"
 
+const getActiveLink = ({ isActive, isPending }) => ({
+  margin: '1rem 0',
+  color: isActive ? 'yellow' : isPending ? 'pending' : 'cornsilk',
+});
+
 export const Title = () => (
     <div>
       <a href="/">
         <img className="logo" src={""} alt="logo" />
       </a>
+      <NavLink style={getActiveLink} to="/body">
+        <a className="fa fa-cart-arrow-down container"> Products</a>
+        </NavLink>
     </div>
   );
 
 const Header = () => {
-    const getActiveLink = ({ isActive, isPending }) => ({
-        margin: '1rem 0',
-        color: isActive ? 'yellow' : isPending ? 'pending' : 'cornsilk',
-      });
 
    return (
     <>   

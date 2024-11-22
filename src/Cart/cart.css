@@ -1,0 +1,111 @@
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --primary-color-:#00203F;
+    --secondary-color-:#ADEFD1;
+}
+
+.cart-counter{
+    position: absolute ;
+    top: 7px ;
+    right: 50px;
+    background: red ;
+    color: white ;
+    border-radius: 50% ;
+    padding: 5px 10px ;
+    font-size: 12px ;
+}
+
+.cart{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.cart-card{
+    border: 1px solid #ccc;
+    margin: 1rem;
+    padding: 1rem;
+    background-color:var(--primary-color-);
+    color: var(--secondary-color-);
+    /* border-radius: 1rem; */
+    margin: 1rem;
+    margin-left:4rem;
+}
+.price {
+    font-size: 1.4em;
+    color: #e28a2b;
+    font-weight: bold;
+  }
+.quantity{
+    font-size: 1em;
+    color:#ADEFD1;
+    font-weight: bold;
+}  
+
+.empty-cart{
+ width: 40%;
+ align-content:center;
+ text-align: center;
+}
+
+.text{
+    color: var(--primary-color-);
+    text-shadow: var(--secondary-color-);
+    font-weight:bolder;
+    text-align: center;
+}
+.animate__animated.animate__fadeInLeft {
+    --animate-duration: 2s;
+  }
+
+.cart-order{
+    border: 1px solid black;
+    border-radius:1rem; 
+    margin: 2rem;
+    padding: 1rem;
+    margin-left:auto ;
+    height: 50vh;
+    background-color:lightgoldenrodyellow;
+    color: var(--primary-color-);
+    word-break: break-all;
+    font-size: medium;
+}
+
+
+/* CSS */
+.button-32 {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 0.5rem;
+}
+
+.button-32:not(:disabled):hover,
+.button-32:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.button-32:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
+
+.btn-trash{
+    width: 5%;
+}
