@@ -39,9 +39,9 @@ const Cart = () => {
         </div>
             <div className="cart-order">
             <h2>Oder summary</h2>
-            <h2>quantity: {quantity} </h2>
+            <h3>quantity: {quantity} </h3>
             <hr />
-            <h2>Total Price :{totalPrice} </h2>
+            <h3>Total Price :{totalPrice} </h3>
             </div>
           
     </div>
