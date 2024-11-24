@@ -3,6 +3,7 @@ import data from './utils/Constant';
 import { Link } from "react-router-dom";
 import { useCart } from "./Context/Cart-Context";
 import "./Cart/cart.css"
+import { useWish } from "./Context/wishlist-context";
 
 const Body = () => {
     const[searchText , setSearchText] = useState();
@@ -69,6 +70,8 @@ const Body = () => {
                     <button className="button-54" onClick={()=> dispatch({type:"ADD_TO_CART", payload:{price,id,name,image}})}>ADD TO CART</button>
                       </div>
                    
+                  <button className="button-32" onClick={()=> dispatch({type:"ADD_TO_WISHLIST", payload:{id,price}})}> <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
                 </div>
                    
              </div>                             
