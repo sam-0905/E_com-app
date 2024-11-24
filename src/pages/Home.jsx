@@ -1,11 +1,25 @@
 import { Link } from 'react-router-dom';
+import background from "../assets/icons/background.jpg"
 
 const Home = () => {
     
     return <>
-        <div>
-        <h1>home</h1>
-        <Link to="/body" ><button>Products</button></Link>
+        <div style={{backgroundImage:`url(${background})`,  
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            height:"100vh auto",
+            width:"auto",
+            marginTop:"0",
+            marginBottom:"0"
+            }}>
+            <div className='home'>
+            <h1>Home</h1>
+            <Link to="/body" ><button className='button-24'>Products</button></Link>
+            <h1>click the button explore more products</h1>
+            <h2>Ecommerce app</h2>
+            <h3>Allan sam</h3>
+            </div>
         </div>
         </>
 }
