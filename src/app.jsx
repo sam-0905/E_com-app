@@ -5,7 +5,7 @@ import Header from './Components/Header';
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import CartItem from "./Cart/CartItem";
-
+import wishList from './pages/wishlist';
 
 const App = () => {
     return (
@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/cartItem" element={<CartItem />} />
 
-        {/* <Route path="/wish" element={<WishListCompo />} /> */}
+        <Route path="/wish" element={<wishList />} />
         <Route path="*" element={<Error />} /> 
 
         {/* <Route path="/user" element={<UserComponent />} /> */}
