@@ -4,16 +4,16 @@ import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import "./style.css"
 import { CartProvider } from './Context/Cart-Context';
-import { wishlistProvider } from './Context/wishlist-context';
+import { WishListProvider } from './Context/wishlist-context';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <wishlistProvider>
+    <WishListProvider>
     <CartProvider>
     <Router>
     <App />
     </Router> 
     </CartProvider>
-    </wishlistProvider>
+    </WishListProvider>
   </React.StrictMode>,
 )

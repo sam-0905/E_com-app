@@ -4,7 +4,7 @@ import data from "../utils/Constant.jsx"
 
 const WishlistItem = () => {
 
-    const {state,dispatch} = useWish();
+    const {andFunctionSetWishlist} = useWish();
 
     return (
         <>
@@ -15,8 +15,8 @@ const WishlistItem = () => {
                    <h2>{name}</h2>
                    <p className="price">Price: ${price}</p>
 
-                   <button className="button-32" onClick={()=> dispatch({type:"ADD_TO_WISHLIST", payload:{id,price}})}>+</button>
-                   <button className="button-32" onClick={() =>dispatch({ type:"REMOVE_FROM_WISHLIST",payload:{id,price}})}>-</button>
+                   <button className="button-32" onClick={()=> andFunctionSetWishlist({type:"ADD_TO_WISHLIST", payload:{id}})}>+</button>
+                   <button className="button-32" onClick={() =>andFunctionSetWishlist({ type:"REMOVE_FROM_WISHLIST",payload:{id}})}>-</button>
                  </div>
             ))}
         </div>

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import data from './utils/Constant';
-import { Link } from "react-router-dom";
 import { useCart } from "./Context/Cart-Context";
 import "./Cart/cart.css"
 import { useWish } from "./Context/wishlist-context";
+import "./wishList/wish.css"
+
 
 const Body = () => {
     const[searchText , setSearchText] = useState();
@@ -20,6 +21,7 @@ const Body = () => {
     const changeSearchHandler = (e) => setSearchText(e.target.value)
     const { state, dispatch } = useCart();
 
+    const {wishlist,andFunctionSetWishlist} = useWish();
 
     return (
         <>  
@@ -63,15 +65,16 @@ const Body = () => {
                      <div> 3 days minimum </div>
                      )}
                     </div>
+
                  <div>{state.quantity > 0 && (
-               <span className="cart-counter"> {state.quantity}</span>
-                   )}
+                   <span className="cart-counter"> {state.quantity}</span>
+                    )}
                     
                     <button className="button-54" onClick={()=> dispatch({type:"ADD_TO_CART", payload:{price,id,name,image}})}>ADD TO CART</button>
-                      </div>
-                   
-                  <button className="button-32" onClick={()=> dispatch({type:"ADD_TO_WISHLIST", payload:{id,price}})}> <i class="fa fa-heart" aria-hidden="true"></i>
-                  </button>
+                 </div>
+
+                 <button className="button-32 wish-btn" onClick={()=> andFunctionSetWishlist({type:"ADD_TO_WISHLIST", payload:{id}})}> <i class="fa fa-heart" aria-hidden="true"></i>
+                 </button>
                 </div>
                    
              </div>                             
