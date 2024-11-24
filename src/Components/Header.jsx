@@ -13,9 +13,9 @@ export const Title = () => (
       <a href="/">
         <img className="logo" src={""} alt="logo" />
       </a>
-      <NavLink style={getActiveLink} to="/body">
-        <a className="fa fa-cart-arrow-down container"> Products</a>
-        </NavLink>
+      <span className='Nav' style={{marginRight:"5rem",marginTop:"0.5rem"}}><NavLink style={getActiveLink} to="/body">
+        <a className="fa fa-product-hunt container"> Products</a>
+        </NavLink></span>
     </div>
   );
 
