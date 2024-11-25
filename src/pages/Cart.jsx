@@ -14,8 +14,8 @@ const Cart = () => {
     <div className="cart">
         <div>
         {cartItems.length > 0 ? (
-        cartItems.map(({ id, name, price, quantity ,image}) => (
-          <div key={id} className="cart-card">
+          cartItems.map(({ id, name, price, quantity ,image}) => (
+            <div key={id} className="cart-card">
             <img src={image}></img>
             <h2>{name}</h2>
             <p className="price">Price: ${price}</p>
@@ -36,15 +36,9 @@ const Cart = () => {
        
         <h1> <img src={EmptyCart} alt="cart-icon" className="empty-cart animate__animated animate__fadeInLeft"  /><span className="text">Your cart is empty!</span></h1>
       )}
-        </div>
-           <div className="cart-order">
-            <h2>Oder summary</h2>
-            <h3>quantity: {quantity} </h3>
-            <hr />
-            <h3>Total Price :{totalPrice} </h3>
-            </div>
-    </div>
 
+     </div>
+    </div>
     </>
   );
 };
