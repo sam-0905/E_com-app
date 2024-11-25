@@ -15,8 +15,8 @@ const Home = () => {
             }}>
             <div className='home'>
             <h1>Home</h1>
+            <h2>click the button explore more products</h2>
             <Link to="/body" ><button className='button-24'>Products</button></Link>
-            <h1>click the button explore more products</h1>
             <h2>Ecommerce app</h2>
             <h3>Allan sam</h3>
             </div>
