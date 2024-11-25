@@ -37,13 +37,12 @@ const Cart = () => {
         <h1> <img src={EmptyCart} alt="cart-icon" className="empty-cart animate__animated animate__fadeInLeft"  /><span className="text">Your cart is empty!</span></h1>
       )}
         </div>
-            <div className="cart-order">
+           <div className="cart-order">
             <h2>Oder summary</h2>
             <h3>quantity: {quantity} </h3>
             <hr />
             <h3>Total Price :{totalPrice} </h3>
             </div>
-          
     </div>
 
     </>
