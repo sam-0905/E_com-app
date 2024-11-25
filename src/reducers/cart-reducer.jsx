@@ -46,6 +46,21 @@ const price = parseFloat(action.payload.price) || 0;
           quantity: Math.max(0, state.quantity - 1), // Ensure no negative quantity
           totalPrice: Math.max(0, state.totalPrice - price), // Ensure no negative price
         };
+
+        case "DELETE_FROM_CART": {
+          const itemToDelete = state.cartItems.find(item => item.id === action.payload.id);
+    
+          if (!itemToDelete) return state;
+    
+          const updatedCartItems = state.cartItems.filter(item => item.id !== action.payload.id);
+    
+          return {
+            ...state,
+            cartItems: updatedCartItems,
+            totalQuantity: Math.max(0, state.quantity - itemToDelete.quantity),
+            totalPrice: Math.max(0, state.totalPrice - itemToDelete.price * itemToDelete.quantity),
+          };
+        }
       default:
         return state;
     }
