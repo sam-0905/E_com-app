@@ -57,10 +57,15 @@ const price = parseFloat(action.payload.price) || 0;
           return {
             ...state,
             cartItems: updatedCartItems,
-            totalQuantity: Math.max(0, state.quantity - itemToDelete.quantity),
-            totalPrice: Math.max(0, state.totalPrice - itemToDelete.price * itemToDelete.quantity),
+            quantity: updatedCartItems.length > 0
+              ? state.quantity - itemToDelete.quantity
+              : 0, // Reset to 0 if no items left
+            totalPrice: updatedCartItems.length > 0
+              ? state.totalPrice - itemToDelete.price * itemToDelete.quantity
+              : 0, // Reset to 0 if no items left
           };
         }
+
       default:
         return state;
     }
